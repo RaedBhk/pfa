@@ -1,0 +1,230 @@
+      <section class="page-contents">
+        <div class="page-head h-400 bg-white parallax-layer dark ov-dark-alpha-50" data-img-src="../../assets/img/bg/03.jpg">
+          <div class="container">
+            <div class="tb-vcenter-wrapper">
+              <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+                <h4 class="head">About</h4>
+                <h1 class="title">Dr. {{member.firstName + ' ' +member.lastName}}</h1>
+              </div>
+              <div class="breadcrumb-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+                <ul class="breadcrumb">
+                  <li><a href="#"><i class="oli oli-home"></i></a></li>
+                  <li><a href="#">publication</a></li>
+                  <li><a href="#">publication type</a></li>
+                  <li>learning environment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section id="main-area">
+          <section class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3"><img [src]="imgPath" />
+
+                  <div class="sp-blank-20"></div>
+                  <h2>{{ member.firstName + ' ' +member.lastName }}</h2>
+                  <ul class="list-unstyled">
+                    <li><strong>{{ member.grade }}</strong></li>
+                    <li><span>E-mail : </span> {{ member.email }}</li>
+                    <li><span>Homepage : </span> {{ member.homepage }}</li>
+                    <li><span>Phone : </span> {{ member.phone }}</li>
+                  </ul>
+                  <!-- button to trigger the file upload when submitted -->
+
+                  <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" class="ol-iconic-link m-top-30 m-bottom-50">
+                    <i class="oli oli-download">
+
+                    </i>Download CV</button></div>
+                <div
+                        class="col-sm-9">
+                  <p></p>
+                  <p></p>
+                  <div class="sp-blank-50"></div>
+                  <h3>Research Interests</h3>
+                  <ol class="with-shaded-label ol-greek">
+                    <li>{{ member.researchFileds }}</li>
+                  </ol>
+                  <div class="sp-blank-80"></div>
+                  <h3>Educations</h3>
+                  <p class="font-cf">
+                    TEXT HERE !!!
+
+
+                  </p>
+                  <div class="ol-timeline" >
+                    <div class="tl-item pub-item with-icon" *ngFor="let these of member.thesis"><span class="item-section">{{these.date | date : 'y'}}</span>
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">{{these.title}}</h3>
+                        <div class="description" *ngFor=" let location of these.laboratories">
+                          <p>{{location}}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2008</span>
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Bachelor of Science</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sp-blank-80"></div>
+                  <h3>Positions</h3>
+                  <p></p>
+                  <div class="ol-timeline">
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2015</span>
+                      <div class="elem-wrapper"><i class="oli oli-desk_lamp"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">General Atlantic Professor</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2012</span>
+                      <div class="elem-wrapper"><i class="oli oli-desk_lamp"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Assistance Professor</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2005</span>
+                      <div class="elem-wrapper"><i class="oli oli-desk_lamp"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Baghale Seller</h3>
+                        <div class="description">
+                          <p>in Daneshjo Blvd.<br>Shiraz Hafezie</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sp-blank-80"></div>
+                  <h3>Selected Publications</h3>
+                  <p class="font-cf m-bottom-50">Phasellus lectus sem, egestas eget sollicitudin ut, lobortis ac nulla.
+                    Phasellus lectus sem, egestas eget solPhasellus lectus sem, egestas
+                    eget sollicitudin ut, lobortis ac nulla. Phasellus lectus sem,
+                    egestas eget sollicitudin ut.licitudin ut. Phasellus lectus sem,
+                    egestas eget sollicitudin ut, lobortis ac nulla. Phasellus lectus
+                    sem, egestas eget sollicitudin ut.</p>
+                  <div class="wrapper">
+                    <div *ngFor="let article of member.articles" class="pub-item with-icon">
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">{{ article.title}}</h3>
+                        <div class="description">
+                          <div class="citation">{{ article.description + ' ,' }} {{ article.date | date:'y'}}<br>
+                            <span *ngFor="let author of article.authors">{{author + ' ' }}</span>
+                          </div>
+                          <a *ngIf="article.url" [href]="article.url" class="link-with-icon"><i class="fa fa-external-link"></i>Publisher's
+                            website</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sp-blank-80"></div>
+                  <h3>Honors &amp; Awards</h3>
+                  <p class="font-cf">Mauris sit amet pellentesque ipsum, eget mollis leo. Vestibulum ante ipsum primis
+                    in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ac ultrices
+                    augue, molestie cursus est.</p>
+                  <div class="ol-timeline">
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2015</span>
+                      <div class="elem-wrapper"><i class="oli oli-university"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Nobel Prize</h3>
+                        <div class="description">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2000</span>
+                      <div class="elem-wrapper"><i class="oli oli-literature"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Nuffield Foundation New Lecturer Award</h3>
+                        <div class="description">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">1999</span>
+                      <div class="elem-wrapper"><i class="oli oli-literature"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Invaders And Guardians Award</h3>
+                        <div class="description">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">1996</span>
+                      <div class="elem-wrapper"><i class="oli oli-university"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Influence Of The Land Award</h3>
+                        <div class="description">
+                          <p>us sem, egestas eget sollicitudin
+                            ut.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <div class="clearfix"></div>
+      </section>
+      <footer id="footer">
+        <div id="footer-main">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <a href="#" class="img"><img src="assets/img/logo/logo-light.png" alt="CHAOS HTML Template"></a>
+                <div class="sp-blank-30"></div>
+                <p>CHAOS is an HTML/CSS/JS template designed by owwwlab team wishing to help academic and scientific websites build modern pages with elegant design.</p>
+                <ul class="social-icons shape-circle">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-md-offset-1 col-sm-6">
+                <div class="widget">
+                  <div class="links">
+                    <ul>
+                      <li><a href="#">Alumni</a></li>
+                      <li><a href="#">Entrepreneurs</a></li>
+                      <li><a href="#">Current students</a></li>
+                      <li><a href="#">Faculty and staff</a></li>
+                      <li><a href="#">Future students</a></li>
+                      <li><a href="#">Fellowship students</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                  <div class="links">
+                    <ul>
+                      <li><a href="#">Research</a></li>
+                      <li><a href="#">Campus Life</a></li>
+                      <li><a href="#">Library</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="assets/js/vendors/vendors.js"></script><script src="assets/js/custom.js"></script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>

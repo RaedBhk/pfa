@@ -1,0 +1,113 @@
+<section class="page-contents">
+  <div class="page-head h-600 center-it parallax-layer dark ov-dark-alpha-80" data-img-src="../../assets/img/bg/06.jpg"
+       data-parallax-mode="mode-title">
+    <div class="container">
+      <div class="tb-vcenter-wrapper">
+        <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+          <h4 class="head">Labo</h4>
+          <h1 class="title">Events</h1>
+          <h2 class="description">LIP2 has held numerous events throughout the last 4 years with many popular scientists and researchers from all over the world making apparences and giving speeches. We are proud of the pretty successful events we have brought in Tunisia and we are honored to invite you to be our guest at our upcoming events. Check all our past and future events here.</h2>
+        </div>
+        <div class="breadcrumb-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+          <ul class="breadcrumb">
+            <li><a href="#"><i class="oli oli-home"></i></a></li>
+            <li><a href="#">publication</a></li>
+            <li><a href="#">publication type</a></li>
+            <li>learning environment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="main-area">
+    <section class="section section-narrow slim-container bg-gray">
+      <div class="container">
+        <div class="row pull-up-160">
+          <div *ngFor="let lastevent of lastevents" class="col-md-4">
+            <a href="#" class="book-el skin-red shadow set-bg"><img src="assets/img/publications/grid/01.jpg" class="set-me">
+              <div
+                      class="contents">
+                <div class="item-meta"><span class="date">{{lastevent.date | date:'dd/mm/yyyy'}}</span></div>
+                <div class="title-wrapper">
+                  <h2 class="title">{{lastevent.title}}</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <section class="slim-container">
+      <div class="container">
+        <div *ngFor="let event of events" class="ol-timeline scrollable-timeline">
+          <div class="tl-item active pub-item with-thumb"><span class="item-section">{{event.date | date:'y'}}</span>
+            <div class="elem-wrapper"><img src="assets/img/publications/01.jpg" alt="item thumbnail" class="pub-thumbnail"></div>
+            <div
+                    class="content-wrapper">
+              <h3 class="title"><a href="#">{{event.title}}</a></h3>
+              <div
+                      class="description">
+                <div class="citation"><span><a href="#">{{event.description}} </a><span class="block-elem">{{event.organizer}}</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+
+  <div class="clearfix"></div>
+</section>
+<footer id="footer">
+  <div id="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#" class="img"><img src="assets/img/logo/logo-light.png" alt="CHAOS HTML Template"></a>
+          <div class="sp-blank-30"></div>
+          <p>CHAOS is an HTML/CSS/JS template designed by owwwlab team wishing to help academic and scientific websites build modern pages with elegant design.</p>
+          <ul class="social-icons shape-circle">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-md-offset-1 col-sm-6">
+          <div class="widget">
+            <div class="links">
+              <ul>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Entrepreneurs</a></li>
+                <li><a href="#">Current students</a></li>
+                <li><a href="#">Faculty and staff</a></li>
+                <li><a href="#">Future students</a></li>
+                <li><a href="#">Fellowship students</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="widget">
+            <div class="links">
+              <ul>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Campus Life</a></li>
+                <li><a href="#">Library</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendors/vendors.js"></script><script src="assets/js/custom.js"></script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>

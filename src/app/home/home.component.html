@@ -1,0 +1,211 @@
+
+<section class="page-contents">
+  <section id="contents">
+  <div class="page-head h-600 center-it parallax-layer dark ov-grad1-alpha-30" data-img-src="assets/img/bg/16.jpg"
+       data-parallax-mode="mode-title">
+    <div class="container">
+      <div class="tb-vcenter-wrapper">
+        <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+          <h4 class="head">Awesome</h4>
+          <h1 class="title">Researchers and Staff</h1>
+          <h2 class="description">
+            Our lab is specialized in IT research. We have the finest engineers in Tunisia working day and night to achieve scientific breakthoughs in the Computer Engineering field. We have built a dedicated and devoting team with a great ability for innovation sharing interesting publications and articles. We are also frequently holding events so please be our guest.
+          </h2>
+        </div>
+        <div class="breadcrumb-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+          <ul class="breadcrumb">
+            <li><a href="#"><i class="oli oli-home"></i></a></li>
+            <li><a href="#">publication</a></li>
+            <li><a href="#">publication type</a></li>
+            <li>learning environment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section id="main-area">
+    <section class="section full-width section-nopadding">
+      <div class="container">
+        <div  class="row gradient-cols-wrapper sync-cols-height light-grad">
+          <div *ngFor="let event of events" class="col-md-4">
+            <div class="inner-wrapper">
+              <div class="icon-box ib-v3 m-bottom-30"><i class="oli oli-greentech"></i>
+                <h3 class="title"><span>{{event.title}}</span></h3>
+                <p>{{event.description}}</p>
+              </div><a href="#" class="btn btn-small btn-round btn-anim-drawer">read more</a></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="heading-with-sub text-center m-bottom-80">
+          <h3 class="title">Recent Publications</h3>
+          <h4 class="subtitle">
+            You will find underneath the most recent publications by our hard working members
+          </h4>
+        </div>
+        <div class="row multi-columns-row col-margin-bottom-30">
+          <div *ngFor="let article of articles" class="col-md-6">
+            <div class="pub-item with-icon">
+              <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+              <div class="content-wrapper">
+                <h3 class="title">{{article.title}}</h3>
+                <div class="description">
+                  <div class="citation">{{article.description}}<br>
+                    <div *ngFor="let auteur of article.authors">{{auteur}}
+                  </div>
+                  </div>
+                  <a *ngIf="article.url" href="#" class="link-with-icon"><i class="fa fa-external-link"></i>{{article.url}}
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </div>
+    </section>
+    <section>
+      <div data-cols="6" data-loop="true" data-autoplaytime="4000" class="owl-carousel items ol-theme ol-lightbox-gallery">
+
+
+        <a href="uploads/5926a07b6c375b3b6523575b.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/5926a07b6c375b3b6523575b.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/5926a0616c375b3b6523575a.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/5926a0616c375b3b6523575a.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/5926a1776c375b3b6523575e.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/5926a1776c375b3b6523575e.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/59269dc04c1f6b35cb22ce1a9.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/59269dc04c1f6b35cb22ce1a9.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/59269dc04c1f6b35cb22cea9.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/59269dc04c1f6b35cb22cea9.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/59268472734d1d24d07e419f.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/59268472734d1d24d07e419f.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/592650ff41287b740ab89c1f.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/592650ff41287b740ab89c1f.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/592683f8734d1d24d07e417b.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/592683f8734d1d24d07e417b.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/59268538734d1d24d07e41c7.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/59268538734d1d24d07e41c7.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/5926a0c36c375b3b6523575c.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/5926a0c36c375b3b6523575c.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+        <a href="uploads/5926a07b6c375b3b6523575b.png" class="ol-hover hover-1 ol-lightbox"><img src="uploads/5926a07b6c375b3b6523575b.png">
+          <div class="ol-overlay ov-grad3-alpha-50">
+            <div class="icons"><i class="oli oli-search"></i></div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="section bg-pattern-3">
+      <div class="container">
+        <div class="heading-with-sub text-center">
+          <h2 class="title">Recent Events</h2>
+          <h4 class="subtitle">These are the most recent events we have held</h4>
+        </div>
+        <div  class="sp-blank-30"></div>
+        <div   data-margin="30" data-nav="true" data-loop="true" class="owl-carousel items owwwlab-theme nav-top-center">
+
+          <a   href="news-single.html" class="book-el skin-blue">
+            <div class="contents" >
+              <div class="item-meta"><span class="date">date</span></div>
+              <div class="title-wrapper">
+                <h2 class="title">title</h2>
+              </div>
+            </div>
+          </a>
+          <a href="news-single.html" class="book-el skin-theme">
+            <div class="contents" >
+              <div class="item-meta"><span class="date">date</span></div>
+              <div class="title-wrapper">
+                <h2 class="title">title2</h2>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </section>
+  <div class="clearfix"></div>
+</section>
+<footer id="footer">
+  <div id="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#" class="img"><img src="assets/img/logo/logo-light.png" alt="CHAOS HTML Template"></a>
+          <div class="sp-blank-30"></div>
+          <p>CHAOS is an HTML/CSS/JS template designed by owwwlab team wishing to help academic and scientific websites build modern pages with elegant design.</p>
+          <ul class="social-icons shape-circle">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-md-offset-1 col-sm-6">
+          <div class="widget">
+            <div class="links">
+              <ul>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Entrepreneurs</a></li>
+                <li><a href="#">Current students</a></li>
+                <li><a href="#">Faculty and staff</a></li>
+                <li><a href="#">Future students</a></li>
+                <li><a href="#">Fellowship students</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="widget">
+            <div class="links">
+              <ul>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Campus Life</a></li>
+                <li><a href="#">Library</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendors/vendors.js"></script><script src="assets/js/custom.js"></script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>

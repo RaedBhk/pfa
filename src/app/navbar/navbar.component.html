@@ -1,0 +1,38 @@
+<header id="header" class="trans dark sticky">
+  <div class="head-main">
+    <div class="container">
+      <div class="logo-wrapper">
+        <a href="index.html"><img src="assets/img/logo/logo-light.png" alt="CHAOS HTML Template" class="logo-light ol-retina"><img src="assets/img/logo/logo-dark.png"
+                                                                                                                                   alt="CHAOS HTML Template" class="logo-dark ol-retina"></a>
+      </div>
+      <ul id="primary-menu">
+          <li  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']" >Home</a></li>
+        <li   [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/team']" >Team</a></li>
+        <li  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/events']" >Events</a></li>
+        <li  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/contact']" >Contact</a></li>
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/profile']" >Profile</a></li>
+
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']"><a [routerLink]="['/login']"  >Login</a></li>
+        <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']"><a [routerLink]="['/register']"   >Register</a></li>
+        <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']"><a (click)="onLogOutClick()" href="#"    >Logout</a></li>
+
+
+      </ul>
+      <div class="header-icons"></div>
+      <div class="search ol-search-trigger simple"><a href="#"><i class="oli oli-search"></i></a></div>
+      <div class="ol-mobile-trigger hamburger hamburger--elastic">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+      <div class="search-area fullscreen">
+        <div data-img-src="assets/img/bg/14.jpg" class="ol-search-bg set-bg ov-dark-alpha-50"></div>
+        <div class="inner-wrapper"><a href="#" class="close-btn"><i class="ol-css-close"></i><span>ESC</span></a>
+          <div class="search-field"><input type="text" placeholder="Type and hit enter"></div>
+          <div class="search-logo"><img src="assets/img/logo/logo-dark.png"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+

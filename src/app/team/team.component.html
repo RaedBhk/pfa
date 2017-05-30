@@ -1,0 +1,147 @@
+<section class="page-contents">
+  <div class="page-head h-600 center-it parallax-layer dark ov-grad1-alpha-30" data-img-src="../../assets/img/bg/16.jpg"
+       data-parallax-mode="mode-title">
+    <div class="container">
+      <div class="tb-vcenter-wrapper">
+        <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+          <h4 class="head">The Team</h4>
+          <h1 class="title">Our dedicated and hard working team members</h1>
+          <h2 class="description">The members of LIP2 laboratory are extremely qualified researchers at their universities and home colleges. They were able to achieve some significant breakthroughs during the past 4 years winning national and international prizes for scientific inventions and originality. We proudly present to you are team members.  </h2>
+        </div>
+        <div class="breadcrumb-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-content">
+          <ul class="breadcrumb">
+            <li><a href="#"><i class="oli oli-home"></i></a></li>
+            <li><a href="#">publication</a></li>
+            <li><a href="#">publication type</a></li>
+            <li>learning environment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="main-area">
+    <section class="section slim-container">
+      <div class="container">
+        <div class="row multi-columns-row col-margin-bottom-40">
+          <div class="col-xs-6 col-md-4" *ngFor="let member of members">
+            <div class="vc-card boxed">
+              <a href="#"><img [src]="imgPath+member._id+'.'+'png'" alt="people"></a>
+              <div class="vc-card-wrapper"><a [routerLink]="['/member',member._id]" routerLinkActive="active" class="title">{{ member.firstName + ' ' + member.lastName }}</a>
+                <div class="subtitle">{{ member.grade }}</div>
+              </div>
+              <div *ngIf="member.socials" class="links">
+                <a [href]="member.socials.google" data-toggle="tooltip" data-original-title="Google+"><i class="oli oli-googleplus"></i></a>
+                <a [href]="member.socials.linkedin" data-toggle="tooltip" data-original-title="Linedin"><i class="oli oli-linkedin"></i></a>
+                <a [href]="member.socials.facebook" data-toggle="tooltip" data-original-title="Facebook"><i class="oli oli-facebook"></i></a>
+                <a [href]="member.socials.twitter" data-toggle="tooltip" data-original-title="Twitter"><i class="oli oli-twitter"></i></a></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="vc-card boxed">
+              <a href="#"><img src="assets/img/people/02.jpg" alt="people"></a>
+              <div class="vc-card-wrapper"><a [routerLink]="['/member','123' ]" routerLinkActive="active" class="title">Dr. Celestine Wilfred</a>
+                <div class="subtitle">Founder & CEO</div>
+              </div>
+              <div class="links">
+                <a href="#" data-toggle="tooltip" data-original-title="Google+"><i class="oli oli-googleplus"></i></a><a href="#" data-toggle="tooltip"
+                                                                                                                         data-original-title="Linedin"><i class="oli oli-linkedin"></i></a>
+                <a
+                        href="#" data-toggle="tooltip" data-original-title="Facebook"><i class="oli oli-facebook"></i></a><a href="#" data-toggle="tooltip"
+                                                                                                                             data-original-title="Twitter"><i class="oli oli-twitter"></i></a></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="vc-card boxed">
+              <a href="#"><img src="assets/img/people/03.jpg" alt="people"></a>
+              <div class="vc-card-wrapper"><a href="#" class="title">Dr.Prof. Woody Terence</a>
+                <div class="subtitle">Associate Marketing Dean</div>
+              </div>
+              <div class="links">
+                <a href="#" data-toggle="tooltip" data-original-title="homepage"><i class="fa fa-external-link"></i></a><a href="#" data-toggle="tooltip"
+                                                                                                                           data-original-title="Biography"><i class="oli oli-user_male_circle"></i></a>
+                <a
+                        href="#" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip"
+                                                                                                                           data-original-title="Twitter"><i class="fa fa-twitter"></i></a></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="vc-card boxed">
+              <a href="#"><img src="assets/img/people/04.jpg" alt="people"></a>
+              <div class="vc-card-wrapper"><a href="#" class="title">John Mcckay</a>
+                <div class="subtitle">Senior Partner</div>
+              </div>
+              <div class="links">
+                <a href="#" data-toggle="tooltip" data-original-title="homepage"><i class="fa fa-external-link"></i></a><a href="#" data-toggle="tooltip"
+                                                                                                                           data-original-title="Biography"><i class="oli oli-user_male_circle"></i></a>
+                <a
+                        href="#" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a><a href="#" data-toggle="tooltip"
+                                                                                                                           data-original-title="Twitter"><i class="fa fa-twitter"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section alt="background" class="section parallax-layer dark-wrapper ov-dark-alpha-60">
+      <div class="container">
+        <div class="row call-out tb-vcenter-wrapper">
+          <div class="col-sm-8 vcenter">
+            <h2 class="title">Apply for Being a TA and Join us at Stanford</h2>
+            <h4 class="sub-title">Absolutely Stunning Design &amp; Functionality Common Things Expected</h4>
+          </div>
+          <div class="col-sm-4 vcenter text-center">
+            <a href="#" class="btn btn-medium btn-circle btn-skin-blue btn-icon-right btn-anim-i"><i class="oli oli-forward"></i><span>read more</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <div class="clearfix"></div>
+</section>
+<footer id="footer">
+  <div id="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#" class="img"><img src="assets/img/logo/logo-light.png" alt="CHAOS HTML Template"></a>
+          <div class="sp-blank-30"></div>
+          <p>CHAOS is an HTML/CSS/JS template designed by owwwlab team wishing to help academic and scientific websites build modern pages with elegant design.</p>
+          <ul class="social-icons shape-circle">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-md-offset-1 col-sm-6">
+          <div class="widget">
+            <div class="links">
+              <ul>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Entrepreneurs</a></li>
+                <li><a href="#">Current students</a></li>
+                <li><a href="#">Faculty and staff</a></li>
+                <li><a href="#">Future students</a></li>
+                <li><a href="#">Fellowship students</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="widget">
+            <div class="links">
+              <ul>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">Campus Life</a></li>
+                <li><a href="#">Library</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendors/vendors.js"></script><script src="assets/js/custom.js"></script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>

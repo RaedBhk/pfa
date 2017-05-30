@@ -1,0 +1,103 @@
+
+<div id="wrapper" class="boxed-layout">
+
+  <section id="contents">
+    <div class="page-head h-400 center-it dark ov-dark-alpha-60">
+      <div id="gmap" data-address="Footscray VIC 3011 Australia"></div>
+      <div class="container">
+        <div class="tb-vcenter-wrapper">
+          <div class="title-wrapper vcenter">
+            <h1 class="title">Sign In</h1>
+            <h2 class="description"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="page-contents">
+      <section id="main-area">
+        <section class="section slim-container">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-center boxed-contact-form">
+                <div class="heading-with-sub">
+                  <h4 class="">Login</h4>
+                </div>
+                <div class="sp-line-40 m-bottom-20"></div>
+                <form (submit)="onLoginSubmit()">
+                  <div class="form-group">
+                    <label class="test" for="login">Username : </label>
+                    <input
+                            type="text"
+                            id="login"
+                            class="form-control"
+                            [(ngModel)]="login"
+                            name="login">
+                  </div>
+                  <div class="form-group">
+                    <label class="test" for="pass">Password : </label>
+                    <input type="password"
+                           id="pass"
+                           class="form-control"
+                           [(ngModel)]="pass"
+                           name="pass">
+                  </div>
+                  <input type="submit" class="btn btn-primary" value="Login">
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </section>
+      <div class="clearfix"></div>
+    </section>
+  </section>
+</div>
+  <footer id="footer">
+    <div id="footer-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <a href="#" class="img"><img src="assets/img/logo/logo-light.png" alt="CHAOS HTML Template"></a>
+            <div class="sp-blank-30"></div>
+            <p>CHAOS is an HTML/CSS/JS template designed by owwwlab team wishing to help academic and scientific websites build modern pages with elegant design.</p>
+            <ul class="social-icons shape-circle">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-md-offset-1 col-sm-6">
+            <div class="widget">
+              <div class="links">
+                <ul>
+                  <li><a href="#">Alumni</a></li>
+                  <li><a href="#">Entrepreneurs</a></li>
+                  <li><a href="#">Current students</a></li>
+                  <li><a href="#">Faculty and staff</a></li>
+                  <li><a href="#">Future students</a></li>
+                  <li><a href="#">Fellowship students</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="widget">
+              <div class="links">
+                <ul>
+                  <li><a href="#">Research</a></li>
+                  <li><a href="#">Campus Life</a></li>
+                  <li><a href="#">Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="assets/js/vendors/vendors.js"></script><script src="assets/js/custom.js"></script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
